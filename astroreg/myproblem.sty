@@ -1,0 +1,24 @@
+\RequirePackage{mdframed}
+
+\newcounter{problem}
+\newcommand{\problem}[2]{\par\bigskip \addtocounter{problem}{1} { \pagebreak[3] \large \textbf{\arabic{problem}. #1} {\hfill #2}} \\ \noindent}
+
+\newenvironment{solution}{\pagebreak[3]\par\bigskip \textbf{\large Решение.} \nopagebreak}{\bigskip}
+
+\newenvironment{theorbg}{\small\begin{mdframed}[
+    linewidth=1pt,
+    linecolor=black,
+    bottomline=false,topline=false,rightline=false,
+    innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+    innerleftmargin=1em,% Distance between vertical rule & proof content
+    skipabove=.5\baselineskip
+  ]}{\end{mdframed}}
+
+\newenvironment{extraq}{\small\pagebreak[3]\par\bigskip \textbf{\large Дополнительные вопросы} \nopagebreak\begin{enumerate}}{\end{enumerate}}
+
+\newcommand{\criterion}[2]{\nopagebreak\hbox to 0.8\textwidth{#1\dotfill #2}}
+\newcommand{\subcriterioncaption}[2]{\nopagebreak\hbox to 0.8\textwidth{#1\hfill#2}}
+\newcommand{\subcriterion}[2]{\nopagebreak\hbox to 0.75\textwidth{\hspace{\parindent}#1\dotfill\emph{#2}}}
+\newcommand{\criterioncaption}[1]{\pagebreak[3]\par\bigskip\hbox to 0.8\textwidth{\textbf{Критерии оценивания \hfill #1}}}
+
+\newenvironment{summary}{\pagebreak[3]\par\bigskip \textbf{\large Что стоит запомнить?}}{}
