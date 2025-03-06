@@ -1,0 +1,23 @@
+\begin{tikzpicture}[dot/.style = {draw, fill = black, color = black, circle, inner sep=1.5pt}, helpdot/.style = {draw, fill = gray, color = gray, circle, inner sep=1.5pt}, >=triangle 45]
+
+    \def\radius{2.1}%это можно варьировать
+    \def\iradius{2.5} %это можно варьировать
+    \coordinate [dot, label=above:{Марс}] (O) at (0,0);
+    \coordinate [dot, label=below:{Наблюдатель}] (A) at (0,-\iradius);
+    \coordinate [dot, label={right:{$B$}}] (west_quadrature) at ($(A)! {sqrt(\radius^2 - 1)} ! -90: (O)$);
+    \coordinate [dot, label={left:{$A$}}] (east_quadrature) at ($(A)! {sqrt(\radius^2 - 1)} ! 90: (O)$);
+    \node [draw,circle through=(A)] at (O) {};
+    \node [draw,circle through=(west_quadrature)] at (O) {};
+    \node [draw,circle through=(east_quadrature)] at (O) {};
+    %\coordinate [helpdot, label=below:{$A$}] (opposition) at ($(sun)! \radius !(iss)$);
+    \draw (O) -- node[left] {$R_{Mars}$} (A) -- (west_quadrature) -- (O) -- (east_quadrature) -- (A);
+    %\draw [dashed] (iss) -- node[left] {$\Delta h$} (opposition);
+    \tkzMarkAngle[mark](A,O,west_quadrature);
+    \tkzLabelAngle[pos = 1.3](A,O,west_quadrature){$\alpha$};
+    \tkzMarkRightAngle(O,A,west_quadrature);
+    \def\helparc{1.1*\iradius*\radius}
+    \def\deltaangle{6}
+    \def\angleb{{-asin(1/\radius)-\deltaangle}}
+    \def\anglea{{180+\deltaangle+asin(1/\radius)}}
+    \draw [->] (O) (-\anglea:\helparc) arc (-\anglea:\angleb:\helparc);
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{problem}{IOAA 2011 T4}
+	Считая, что Фобос движется в точности по круговой орбите в экваториальной плоскости Марса, посчитайте время, в течение которого спутник находится над горизонтом для наблюдателя на Марсианском экваторе. Используйте следующие данные:
+
+    Радиус Марса $R_{Mars}=3393$ км, период обращения Марса вокруг своей оси $T_{Mars}=24.623$ ч, масса Марса $M_{Mars}=6.421\cdot 10^{23}$ кг, радиус орбиты Фобоса $R_P=9380$ км.
+
+\begin{solution}
+	Изобразим ситуацию\\
+    \begin{figure}[h]\centering
+        \input{ioaa/2011/T4/duration}
+        \caption{Марс и орбита Фобоса\label{2011/T4/duration}}
+    \end{figure}\\
+    На рисунке А - точка восхода, В - точка захода Фобоса. По дуге АВ спутник движется с относительной скоростью 
+    \begin{equation}
+        \omega=\omega_P-\omega_{Mars}=\frac{360}{T_P}-\frac{360}{T_{Mars}}~(^{\circ}/\text{ч})
+    \end{equation}
+    Найдем период обращения Фобоса вокруг Марса через III обобщенный закон Кеплера:
+    \begin{equation}
+        T_P=2\pi\sqrt{\frac{R^3_P}{GM_{Mars}}}=2\pi\sqrt{\frac{9380000^3~(\text{м$^3$})}{G\cdot 6.421\cdot 10^{23}~\text{кг}}}=7.659~\text{ч}
+    \end{equation}
+    Тогда найдем относительную угловую скорость
+    \begin{equation}
+        \omega=\frac{360}{7.659}-\frac{360}{24.623}=32.4~(^{\circ}/\text{ч})
+    \end{equation}
+    Теперь найдем угол $\alpha$:
+    \begin{equation}
+        \alpha=\arccos{\left(\frac{R_{Mars}}{R_P}\right)}=\arccos{\left(\frac{3393}{9380}\right)}=68.8^{\circ}
+    \end{equation}
+    За сеанс наблюдения спутник проходит угол $2\alpha=137.6^{\circ}$. Теперь мы можем найти время видимости
+    \begin{equation}
+        t=\frac{2\alpha}{\omega}=\frac{137.6}{32.4}=4.25~\text{ч}
+    \end{equation}
+\end{solution}
+
+\begin{answer}
+	$4.25$ ч
+\end{answer}
+\end{problem}

@@ -1,0 +1,29 @@
+\usepackage{preamble}
+
+\begin{document}
+\begin{problem}{IOAA 2007 T9} 
+	Рассчитайте полную светимость звезды с температурой поверхности $7500K$ и радиусом в $2.5$ солнечных. Ответ дайте в солнечных светимостях, температуру поверхности Солнца примите равной $5800K$.
+
+\begin{solution}
+	Согласно закону Стефана-Больцмана, запишем выражение для светимости звезды
+    \begin{equation}
+        L=4\pi R^2\sigma T^4,
+    \end{equation}
+    где $R$ - радиус звезды, $T$ - температура поверхности.\\
+    Найдем отношение искомой светимости звезды к светимости Солнца:
+    \begin{equation}
+        \frac{L}{L_{\odot}}=\left(\frac{R}{R_{\odot}}\right)^2\left(\frac{T}{T_{\odot}}\right)^4
+    \end{equation}
+    Найдя численное значение этого выражения, получим ответ, т.е. светимость звезды в светимостях Солнца.
+    \begin{equation}
+        \frac{L}{L_{\odot}}=2.5^2\cdot\left(\frac{7500}{5800}\right)^4\approx17.5
+        \quad\Longrightarrow\quad
+        L=17.5L_{\odot}
+    \end{equation}
+\end{solution}
+
+\begin{answer}
+	$17.5$
+\end{answer}
+\end{problem}
+\end{document}

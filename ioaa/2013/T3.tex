@@ -1,0 +1,22 @@
+\begin{problem}{IOAA 2013 T3} 
+	По оценкам Солнце будет жить на главной последовательности около $t_1=10$ млрд лет. Оцените время $t_2$, в течение которого Солнце бы находилось на главной последовательности, будь оно в $5$ раз тяжелее.
+
+\begin{solution}
+	Пусть $E$ - энергия Солнца, $L$ - светимость или мощность излучения Солнца, а $t$ - время жизни на ГП. Эти параметры можно связать соотношением
+    \begin{equation}
+        t=\frac{E}{L}
+    \end{equation}
+    Из предположения, что $E\propto M$, а $L\propto M^4$ (справедливо для звезд ГП), можем записать
+    \begin{equation}
+        t\propto\frac{M}{M^4}=M^{-3}
+    \end{equation}
+    Тогда можем найти время $t_2$:
+    \begin{equation}
+        \frac{t_1}{t_2}=\left(\frac{M_1}{M_2}\right)^{-3} \quad\Longrightarrow\quad t_2=t_1\cdot\left(\frac{M_1}{M_2}\right)^3=10^{10}~\text{лет}~\cdot\left(\frac{1M_{\odot}}{5M_{\odot}}\right)^3=80\cdot 10^6~\text{лет}
+    \end{equation}
+\end{solution}
+
+\begin{answer}
+	$80$ млн лет
+\end{answer}
+\end{problem}

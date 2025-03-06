@@ -1,0 +1,38 @@
+\begin{problem}{IOAA 2009 T2}
+	Оцените количество фотонов, приходящих за секунду в глаз человека на длине волны $\lambda=550$ нм (полоса V) от звезды спектрального класса $G2$, принадлежащей главной последовательности и имеющей видимую звездную величину $6^m$ (порог видимости человеческого глаза). Считайте диаметр зрачка равным $6$ мм, а все излучение звезды имеющим длину волны  $\lambda=550$ нм.
+
+\begin{solution}
+    Звезду из условия для оценки мы можем считать подобной Солнцу. Сравним данную звезду и Солнце по формуле Погсона, чтобы найти освещенность, создаваемую звездой:
+    \begin{equation}
+        \frac{E}{E_{\odot}}=10^{0.4(m_{\odot}-m)},
+    \end{equation}
+    где $E=1360$ Вт/м$^2$ - солнечная постоянная, $m_{\odot}=-26.72^m$ - видимая звездная величина Солнца, $m=6^m$ - видимая звездная величина звезды.
+    \begin{equation}
+        E=E_{\odot}\cdot 10^{0.4(m_{\odot}-m)}=1360~\text{Вт/м$^2$}~\cdot 10 ^{-0.4(6^m+26.72^m)} \quad\Longrightarrow\quad E\approx 1.11\cdot 10^{-10}~\text{Вт/м$^2$}
+    \end{equation}
+    Теперь рассчитаем величину потока излучения, приходящего от этой звезды в глаз человека:
+    \begin{equation}
+        \Phi=E\cdot S=E\cdot\frac{\pi\cdot d^2}{4}=10^{-10}~\text{Вт/м$^2$}~\cdot\frac{\pi\cdot 0.006^2~(\text{м$^2$})}{4} \quad\Longrightarrow\quad \Phi=3.14\cdot 10^{-15}~\text{Вт}
+    \end{equation}
+	Теперь запишем выражение для энергии одного фотона:
+    \begin{equation}
+        \varepsilon=h\nu
+    \end{equation}
+    Частота излучения $\nu$ может быть найдена из соотношения $\lambda\nu=c$.
+    \begin{equation}
+        \varepsilon=h\frac{c}{\lambda}=\frac{hc}{550\cdot 10^{-9}~\text{м}}\approx 3.61\cdot 10^{-19}~\text{Дж}
+    \end{equation}
+    Поток $\Phi$ - энергия всех фотонов, попадающих в глаз за секунду:
+    \begin{equation}
+        \Phi=\frac{N\cdot\varepsilon}{t}
+    \end{equation}
+    Отсюда выразим количество фотонов $N$, принимая $t$ равным одной секунде
+    \begin{equation}
+        N=\frac{\Phi\cdot t}{\varepsilon}=\frac{3.14\cdot 10^{-15}~\text{Вт}~\cdot 1~\text{с}}{3.61\cdot 10^{-19}~\text{Дж}} \quad\Longrightarrow\quad N=8700~\text{фотонов}\approx 10^4~\text{фотонов}
+    \end{equation}
+\end{solution}
+
+\begin{answer}
+	$10^4$~фотонов
+\end{answer}
+\end{problem}

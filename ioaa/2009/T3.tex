@@ -1,0 +1,29 @@
+\begin{problem}{IOAA 2009 T3} 
+	Оцените радиус планеты, гравитацию которой можно преодолеть лишь подпрыгнув вертикально вверх. Плотность планеты считайте равной плотности Земли.
+
+\begin{solution}
+	Пусть на Земле человек в среднем может подпрыгнуть на $h=40$ см. Скорость при отталкивании найдем из кинематики:
+\begin{equation}
+    h=\frac{V^2-0}{2g} \quad\Longrightarrow\quad V=\sqrt{2gh}
+\end{equation}
+Чтобы человек смог преодолеть гравитацию, эта скорость должна равняться второй космической на поверхности планеты
+\begin{equation}
+    \sqrt{2gh}=\sqrt{\frac{2GM_p}{R_p}} \quad\Longleftrightarrow\quad \frac{GM_{\oplus}}{R^2_{\oplus}}\cdot h=\frac{GM_p}{R_p}
+\end{equation}
+Массу представим как
+\begin{equation}
+    M=\frac{4}{3}\pi R^3\cdot\rho
+\end{equation}
+Тогда выражение перепишется в виде
+\begin{equation}
+    \frac{\frac{4}{3}\pi R^3_{\oplus}\cdot\rho}{R^2_{\oplus}}\cdot h=\frac{\frac{4}{3}\pi R^3_p\cdot\rho}{R_p} \quad\Longrightarrow\quad R_p=\sqrt{R_{\oplus}h}=\sqrt{6400\cdot 0.4\cdot 10^{-3}}~(\text{км})=1.6~\text{км}
+\end{equation}
+\begin{equation}
+    R_p\approx 1.5~\text{км}
+\end{equation}
+\end{solution}
+
+\begin{answer}
+	$1.5$ км
+\end{answer}
+\end{problem}
